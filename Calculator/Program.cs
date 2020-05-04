@@ -38,9 +38,13 @@ namespace Calculator
             {
                 total = subtractNumbers(userNumberOne, userNumberTwo);
             }
-            else if (operand == "multiply" || operand == "*") ;
+            else if (operand == "multiply" || operand == "*")
             {
                 total = multiplyNumbers(userNumberOne, userNumberTwo);
+            }
+            else if(operand == "divide" || operand == "/")
+            {
+                total = divideNumbers(userNumberOne, userNumberTwo);
             }
 
             // tell user the result: 
@@ -66,6 +70,10 @@ namespace Calculator
             return total;
         }
         // Divide Function
-
+        public static int divideNumbers(int userNumberOne, int userNumberTwo)
+        {
+            int total = userNumberOne  / userNumberTwo;
+            return total;
+        }
     }
 }
