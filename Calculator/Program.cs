@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace Calculator
 {
@@ -33,9 +34,13 @@ namespace Calculator
                 total = addNumbers(userNumberOne, userNumberTwo);
 
             }
+            else if (operand == "subtract" || operand == "-")
+            {
+                total = subtractNumbers(userNumberOne, userNumberTwo);
+            } 
 
             // tell user the result: 
-            Console.WriteLine("The total for your calculation is{0}", total);
+            Console.WriteLine("The total for your calculation is {0}", total);
       
         }
         // Add Function
@@ -45,6 +50,11 @@ namespace Calculator
             return total;
         }
         // Subtract Function
+        public static int subtractNumbers(int userNumberOne, int userNumberTwo)
+        {
+            int total = userNumberOne - userNumberTwo;
+            return total;
+        }
         // Multiply Function
         // Divide Function
 
