@@ -37,7 +37,11 @@ namespace Calculator
             else if (operand == "subtract" || operand == "-")
             {
                 total = subtractNumbers(userNumberOne, userNumberTwo);
-            } 
+            }
+            else if (operand == "multiply" || operand == "*") ;
+            {
+                total = multiplyNumbers(userNumberOne, userNumberTwo);
+            }
 
             // tell user the result: 
             Console.WriteLine("The total for your calculation is {0}", total);
@@ -56,6 +60,11 @@ namespace Calculator
             return total;
         }
         // Multiply Function
+        public static int multiplyNumbers(int userNumberOne, int userNumberTwo)
+        {
+            int total = userNumberOne * userNumberTwo;
+            return total;
+        }
         // Divide Function
 
     }
